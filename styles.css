@@ -1,0 +1,331 @@
+/* --- SEU CSS BASE E VARIÁVEIS --- */
+/* Importação da Fonte Poppins deve estar no <head> do HTML */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    /* Cores fornecidas no seu CSS */
+    --red:#339ade; /* Reduzida para 'primary-light-blue' */
+    --white: #fff;
+    --dark: #333; 
+    --blue: #0a0a0a;
+    --blue-light: #363636;
+    --orange: #DBBA2A;
+
+    /* Variáveis principais para o corpo do projeto (mantendo a consistência)  */
+    --primary-blue: var(--blue);
+    --secondary-blue: var(--blue-light);
+    --light-gray: #f5f5f5;
+}
+body{
+    color: var(--dark);
+    background: var(--white);
+    padding-top: 70px; /* Espaço para o menu fixo */
+}
+
+/* --- MENU (NAVIGATION) ADAPTADO --- */
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    /* Seu degradê azul */
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.nav-menu{
+    display: block;
+}
+/* CORREÇÃO APLICADA: O UL agora é filho direto do .nav-menu */
+.nav-menu .nav-list{ 
+    display: flex;
+    align-items: center;
+    gap: 5rem; 
+}
+/* CORREÇÃO APLICADA: Seletor mais preciso para os links */
+.nav-menu .nav-list li a{ 
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.nav-menu .nav-list li a:hover, .nav-menu .nav-list li.active-page a{
+    color: var(--orange); 
+}
+
+/* Oculta o link "Projetos" no menu desktop */
+/* Ele é o 4º item no seu HTML (Início, LinkedIn, Instagram, Projetos) */
+.nav-menu .nav-list li:nth-child(4) { 
+    display: none;
+}
+
+/* --- ÍCONE DO MENU MOBILE --- */
+
+.menu{
+    cursor: pointer;
+    display: none; /* Escondido no desktop */
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 1; /* Alinhamento vertical do ícone */
+}
+.menu i {
+    font-size: 1.8rem;
+}
+
+/* --- CONTEÚDO PRINCIPAL (Corpo do Projeto) --- */
+
+.content-body {
+    background-color: var(--white);
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 70px);
+}
+
+.projects-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* --- Galeria de Categorias (Carrossel Principal) --- */
+
+.project-gallery-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.category-display {
+    min-width: 250px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.nav-arrow {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--orange);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.nav-arrow:hover {
+    opacity: 0.7;
+}
+
+.nav-arrow img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    filter: invert(20%) sepia(85%) saturate(3000%) hue-rotate(200deg) brightness(80%) contrast(100%);
+}
+
+/* --- Amostras de Conteúdo (Galeria de Projetos) --- */
+
+.content-samples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.sample-item {
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--light-gray);
+}
+
+.sample-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sample-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.sample-item h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--secondary-blue);
+}
+
+.sample-item p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* --- Destaque do Projeto (Detalhes) --- */
+
+.project-details-highlight {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 30px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 10px;
+    background-color: #fcfdff;
+    margin-top: 40px;
+}
+
+.details-text {
+    flex: 1;
+}
+
+.details-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.detail-block h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--secondary-blue);
+}
+
+.btn-processo {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.btn-processo:hover {
+    background: var(--orange);  /* Usei a variável orange para o hover */
+}
+
+.details-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.details-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================================= */
+/* --- MEDIA QUERIES (Responsividade) --- */
+/* ======================================= */
+
+@media (max-width: 785px){
+    /* --- Menu Mobile (Tela Cheia) --- */
+    
+    .navigation{
+        padding: 18px 20px;
+    }
+
+    .menu{
+        display: block;
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start; 
+        padding-top: 80px;
+        background: linear-gradient(135deg, var(--blue), var(--blue-light));
+        transition: right 0.5s;
+        z-index: 999;
+    }
+    
+    .nav-menu.active{
+        right: 0;
+    }
+
+    .nav-menu .nav-list { /* Seletor corrigido */
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-menu .nav-list li a{ /* Seletor corrigido */
+        font-size: 1.5rem;
+        padding: 20px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Garante que o item Projetos apareça no menu mobile */
+    .nav-menu .nav-list li:nth-child(4) { 
+        display: block;
+    }
+
+    /* --- Corpo de Conteúdo --- */
+
+    .content-body {
+        padding: 20px;
+    }
+    
+    .category-display {
+        font-size: 20px;
+        min-width: 150px;
+    }
+
+    /* Amostras de Conteúdo */
+    .content-samples {
+        grid-template-columns: 1fr;
+    }
+
+    /* Destaque do Projeto */
+    .project-details-highlight {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .details-image, .details-text {
+        max-width: 100%;
+    }
+}

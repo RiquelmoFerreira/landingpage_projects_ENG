@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancerlytics - Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+</head>
+<body>
+    <header class="navigation">
+        <div class="logo">Lancerlytics</div>
+        
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="https://riquelmoferreira.github.io/lancerlytics_landing_page/" target="_self" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="https://www.linkedin.com/in/riquelmo-afonso-avelar-ferreira-df5183/" target="_blank" class="nav-link">LinkedIn</a></li>
+                <li class="nav-item"><a href="https://www.instagram.com/lancerlytics/" target="_blank" class="nav-link">Instagram</a></li>
+                <li class="nav-item active-page"><a href="#" class="nav-link">Projetos</a></li> 
+                <li class="nav-item"><a href="https://riquelmoferreira.github.io/Linktree_RiquelmoFerreira/" target="_blank" class="nav-link">Linktree</a></li>
+            </ul>
+        </nav>
+        
+        <div class="menu">
+            ☰
+        </div>
+    </header>
+
+    <main class="content-body">
+        <section class="projects-section">
+            <h1>PROJETOS</h1>
+            <p class="section-description">
+                Aqui você encontra uma seleção dos projetos desenvolvidos pela <strong>Lancerlytics</strong>, focados em análise de dados e soluções de tecnologia. Nosso foco está em Análise de Dados, Automação e Inteligência de Negócios, utilizando ferramentas como Power BI, Python, SQL e Bancos de Dados. Toda a expertise técnica é aplicada na prática em transformar dados em insights estratégicos e soluções eficientes para empresas e profissionais.
+            </p>
+
+            <div class="project-gallery-main">
+                <a href="#" class="nav-arrow prev-arrow" id="prev-category-btn" aria-label="Categoria Anterior">
+                    <img src="img/arrow-left1.svg" alt="Seta para esquerda">
+                </a>
+                <span class="category-display" id="current-category">Power BI</span>
+                <a href="#" class="nav-arrow next-arrow" id="next-category-btn" aria-label="Próxima Categoria">
+                    <img src="img/arrow-right1.svg" alt="Seta para direita">
+                </a>
+            </div>
+
+            <div class="content-samples" id="projects-container">
+                </div>
+
+            <div class="project-details-highlight" id="project-details" style="display: none;">
+                <div class="details-text">
+                    <h2>Sobre o Projeto</h2>
+                    <div class="detail-block">
+                        <h3>Título: <span id="detail-title"></span></h3>
+                    </div>
+                    <div class="detail-block">
+                        <h3>Descrição</h3>
+                        <p id="detail-description"></p>
+                    </div>
+                    <a href="#" class="btn-processo" id="detail-link" target="_blank">Acessar o Projeto</a>
+                </div>
+                <div class="details-image">
+                    <img src="" alt="Detalhes do Projeto" id="detail-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
