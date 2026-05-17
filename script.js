@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- LÓGICA DO CARROSSEL DE PROJETOS (RESTAURADA E COMPLETA) ---
 
-    // 1. Dados dos Projetos (MOCK DATA)
+    // 1. Dados dos Projetos (MOCK DATA
     const PROJECTS_DATA = {
         "Power BI": [
             { id: 1, title: "Employee Report", subtitle: "Tickets, Customers and Employees", description: "Interactive dashboard developed in Power BI, bringing together strategic indicators in clear and dynamic data visualizations about the clients and employees of a fictitious company. It allows for quick analysis, monitoring of metrics such as monthly hires, number of employees, contract values, etc. in real time and ensures support for data-driven decision making.", link: "https://app.powerbi.com/view?r=eyJrIjoiMDA0Y2VmN2QtZjNiYi00MjEwLWFjYzItY2YwMzg2MzllNmYwIiwidCI6ImY5NTUwY2NjLWNiZmQtNGUxNy1iNWJmLTE3ODAxNmUwOGVhZCJ9", image: "img/RelFuncP.png" },
